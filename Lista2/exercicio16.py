@@ -1,4 +1,6 @@
-# Exercício 16: Desenvolva um algoritmo que pergunte um código e de acordo com o valor digitado seja apresentado o cargo correspondente. Caso o usuário digite um código que não esteja na tabela, mostrar uma mensagem de código inválido. Utilize a tabela abaixo: ... (tabela omitida)
+# Exercício 16: Desenvolva um algoritmo que pergunte um código e de acordo com o valor 
+# digitado seja apresentado o cargo correspondente. Caso o usuário digite um código que não esteja na tabela, 
+# mostrar uma mensagem de código inválido. Utilize a tabela abaixo: ... (tabela omitida)
 
 codigo = int(input("Digite o código: "))
 if (codigo == 101):

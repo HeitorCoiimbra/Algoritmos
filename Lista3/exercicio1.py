@@ -1,4 +1,5 @@
-# Exercício 1: Escrever um algoritmo que lê 10 valores e conte quantos destes valores são negativos, escrevendo esta informação.
+# Exercício 1: Escrever um algoritmo que lê 10 valores e conte quantos destes valores são negativos, 
+# escrevendo esta informação.
 
 contador = 0
 

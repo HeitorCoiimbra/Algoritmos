@@ -1,4 +1,5 @@
-# Exercício 4: A prefeitura de uma cidade fez uma pesquisa entre seus habitantes, coletando dados sobre o salário e número de filhos.
+# Exercício 4: A prefeitura de uma cidade fez uma pesquisa entre seus habitantes, 
+# coletando dados sobre o salário e número de filhos.
 
 salario = float(input("Digite o salário (negativo para encerrar): "))
 

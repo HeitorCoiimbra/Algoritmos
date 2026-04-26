@@ -1,4 +1,5 @@
-# Exercício 12: Leia uma quantidade desconhecida de números e conte quantos deles estão nos intervalos [0,25], [26,50], [51,75] e [76,100]. A entrada termina quando for lido um número negativo.
+# Exercício 12: Leia uma quantidade desconhecida de números e conte quantos deles estão nos 
+# intervalos [0,25], [26,50], [51,75] e [76,100]. A entrada termina quando for lido um número negativo.
 
 valor = float(input("Digite um número (negativo para encerrar): "))
 

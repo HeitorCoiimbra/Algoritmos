@@ -1,4 +1,5 @@
-# Exercício 9: Informar o número do mês do ano e mostrar o nome do mês por extenso. Caso o número do mês não exista, exibir a mensagem "Mês inválido".
+# Exercício 9: Informar o número do mês do ano e mostrar o nome do mês por extenso. ]
+# Caso o número do mês não exista, exibir a mensagem "Mês inválido".
 
 mes = int(input("Digite o número do mês: "))
 if (mes == 1):

@@ -1,4 +1,5 @@
-# Exercício 17: Uma encomenda de unidades de disco contém unidades marcadas com um código de 1 a 4, que indica o tipo seguinte: ... (tabela omitida)
+# Exercício 17: Uma encomenda de unidades de disco contém unidades marcadas com um código de 1 a 4, 
+# que indica o tipo seguinte: ... (tabela omitida)
 
 codigo = int(input("Digite o código: "))
 if (codigo == 1):

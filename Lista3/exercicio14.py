@@ -1,4 +1,5 @@
-# Exercício 14: Uma empresa deseja aumentar seus preços em 20%. Leia o código e o preço de custo de cada produto e calcule o preço novo. A entrada termina quando for lido um código negativo.
+# Exercício 14: Uma empresa deseja aumentar seus preços em 20%. Leia o código e o preço de custo de cada produto
+# e calcule o preço novo. A entrada termina quando for lido um código negativo.
 
 codigo = int(input("Digite o código do produto (negativo para encerrar): "))
 

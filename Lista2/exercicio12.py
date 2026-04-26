@@ -1,4 +1,5 @@
-# Exercício 12: A taxa de juros aplicada em fundos depositados em um banco é determinada pelo tempo em que estes ficam depositados. Para um banco em particular, a seguinte tabela é usada: ... (tabela omitida para brevidade)
+# Exercício 12: A taxa de juros aplicada em fundos depositados em um banco é determinada pelo tempo 
+# em que estes ficam depositados. Para um banco em particular, a seguinte tabela é usada: ... (tabela omitida para brevidade)
 
 tempo = float(input("Digite o tempo em depósito (anos): "))
 if (tempo >= 5):

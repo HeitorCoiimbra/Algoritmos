@@ -1,4 +1,5 @@
-# Exercício 13: Baseado no ano e peso do modelo de um automóvel, o estado de Nova Jersey determina a sua classe de peso e taxa de registro usando a seguinte tabela: ... (tabela omitida)
+# Exercício 13: Baseado no ano e peso do modelo de um automóvel, o estado de Nova Jersey 
+# determina a sua classe de peso e taxa de registro usando a seguinte tabela: ... (tabela omitida)
 
 ano = int(input("Digite o ano do modelo: "))
 peso = float(input("Digite o peso (kg): "))

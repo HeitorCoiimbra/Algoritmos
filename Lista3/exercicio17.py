@@ -1,4 +1,5 @@
-# Exercício 17: Lê 10 valores, um de cada vez, e conta quantos deles estão no intervalo [10,20] e quantos estão fora do intervalo.
+# Exercício 17: Lê 10 valores, um de cada vez, e conta quantos deles estão no intervalo [10,20] 
+# e quantos estão fora do intervalo.
 
 cont_dentro = 0
 cont_fora = 0

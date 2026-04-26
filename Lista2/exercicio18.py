@@ -1,4 +1,8 @@
-# Exercício 18: Escreva um programa que receba dois números reais e um código de seleção do usuário. Se o código digitado for 1, faça o programa adicionar os dois números previamente digitados e mostrar o resultado; se o código de seleção for 2, os números devem ser multiplicados; se o código de seleção for 3, o primeiro número deve ser dividido pelo segundo. Se nenhuma das opções acima for escolhida, mostrar "Código inválido".
+# Exercício 18: Escreva um programa que receba dois números reais e um código de seleção do usuário. 
+# Se o código digitado for 1, faça o programa adicionar os dois números previamente digitados e mostrar o resultado; 
+# se o código de seleção for 2, os números devem ser multiplicados; 
+# se o código de seleção for 3, o primeiro número deve ser dividido pelo segundo. 
+# Se nenhuma das opções acima for escolhida, mostrar "Código inválido".
 
 num1 = float(input("Digite o primeiro número: "))
 num2 = float(input("Digite o segundo número: "))

@@ -1,4 +1,6 @@
-# Exercício 11: Leia um número não determinado de valores e calcule a média aritmética dos valores lidos, a quantidade de valores positivos, a quantidade de valores negativos e o percentual de valores negativos e positivos.
+# Exercício 11: Leia um número não determinado de valores e calcule a média aritmética dos valores lidos, 
+# a quantidade de valores positivos, a quantidade de valores negativos e o percentual de valores negativos e 
+# positivos.
 
 valor = float(input("Digite um valor (0 para encerrar): "))
 

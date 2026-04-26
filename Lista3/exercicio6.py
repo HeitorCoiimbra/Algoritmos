@@ -1,4 +1,5 @@
-# Exercício 6: Construir um algoritmo que calcule a média aritmética de vários valores inteiros positivos, digitados pelo usuário. O final da leitura acontecerá quando for lido um valor negativo.
+# Exercício 6: Construir um algoritmo que calcule a média aritmética de vários valores inteiros positivos,
+# digitados pelo usuário. O final da leitura acontecerá quando for lido um valor negativo.
 
 valor = int(input("Digite um valor inteiro positivo (negativo para encerrar): "))
 
