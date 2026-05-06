@@ -1,4 +1,5 @@
 from random import *
+
 continuarRodada = True
 erros = 0
 
@@ -10,8 +11,7 @@ palavras = ["Zky", "Rszyzydkwy", "Kfsky", "Zkcckby", "Qkdy", "Mkmrybby", "Mkck",
             "Ymevdy", "Csxy", "Dbkxcwsccky", "Bocoxrk", "Oczsbkv",  "Csxqevkb", "Oczobkxmk", "Rszxyco", "Ylbk-Zbswk", "Fkjsy", 
             "Csvoxmsy", "Pkxdkcwk", "Hknboj", "Wscdobsy", "Bokvsnkno", "Pbkqwoxdy", "Nkny"]
 
-alfabeto = ["K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W",
-            "X", "Y", "Z", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J"]
+alfabeto = "KLMNOPQRSTUVWXYZABCDEFGHIJ"
 palavraCodificada = ""
 palavraDecodificada = ""
 
@@ -71,45 +71,47 @@ else:
     while continuarRodada:
         letra = input("\nEscolha uma letra: ").lower()
 
-        if len(letra) != 1:
+        if len(letra) > 1:
             print("Digite apenas uma letra!")
         else:
-
-            if letra in letrasErradas or letra in letrasCertas:
-                print("Você já jogou essa letra!")
+            if len(letra) < 1:
+                print("Você deve jogar uma letra!")
             else:
-
-                if letra.lower() in palavraEscolhida.lower():
-                    print(f"A palavra tem {letra}")
-                    letrasCertas += letra
-
-                    for i in range(len(palavraEscolhida)):
-                        if palavraEscolhida[i].lower() == letra.lower():
-                            palavraEscondida[i] = palavraEscolhida[i]
-                    print("".join(palavraEscondida))
-                    print(f"Erros: {erros}")
-                    print(f"Letras erradas: {letrasErradas}")
-
+                if letra in letrasErradas or letra in letrasCertas:
+                    print("Você já jogou essa letra!")
                 else:
-                    print("Essa letra não está na palavra")
-                    letrasErradas += letra + " "
-                    erros += 1
-                    print("".join(palavraEscondida))
-                    if erros >= 6: 
-                        continuarRodada = False
-                        print(f"Você foi enforcado! A palavra era: {palavraEscolhida}")
-                    else:
-                        print(f"Erros: {erros}")
-                    print(f"Letras erradas: {letrasErradas}")
-        
-        
 
-        AcertouTodas = True
-        for i in range(len(letrasPalavraEscolhida)):
-            if letrasPalavraEscolhida[i] != " ":
-                if letrasPalavraEscolhida[i].lower() not in letrasCertas.lower():
-                    AcertouTodas = False
-        
-        if AcertouTodas == True:
-            continuarRodada = False
-            print(f"\nVocê achou a palavra! A palavra era: {palavraEscolhida}")
+                    if letra.lower() in palavraEscolhida.lower():
+                        print(f"A palavra tem {letra}")
+                        letrasCertas += letra
+
+                        for i in range(len(palavraEscolhida)):
+                            if palavraEscolhida[i].lower() == letra.lower():
+                                palavraEscondida[i] = palavraEscolhida[i]
+                        print("".join(palavraEscondida))
+                        print(f"Erros: {erros}")
+                        print(f"Letras erradas: {letrasErradas}")
+
+                    else:
+                        print("Essa letra não está na palavra")
+                        letrasErradas += letra + " "
+                        erros += 1
+                        print("".join(palavraEscondida))
+                        if erros >= 6: 
+                            continuarRodada = False
+                            print(f"Você foi enforcado! A palavra era: {palavraEscolhida}")
+                        else:
+                            print(f"Erros: {erros}")
+                        print(f"Letras erradas: {letrasErradas}")
+            
+            
+
+                    AcertouTodas = True
+                    for i in range(len(letrasPalavraEscolhida)):
+                        if letrasPalavraEscolhida[i] != " ":
+                            if letrasPalavraEscolhida[i].lower() not in letrasCertas.lower():
+                                AcertouTodas = False
+                    
+                    if AcertouTodas == True:
+                        continuarRodada = False
+                        print(f"\nVocê achou a palavra! A palavra era: {palavraEscolhida}")
