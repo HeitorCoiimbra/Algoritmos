@@ -97,7 +97,7 @@ else:
                         letrasErradas += letra + " "
                         erros += 1
                         print("".join(palavraEscondida))
-                        if erros >= 6: 
+                        if erros > 6: 
                             continuarRodada = False
                             print(f"Você foi enforcado! A palavra era: {palavraEscolhida}")
                         else:
@@ -108,7 +108,7 @@ else:
 
                     AcertouTodas = True
                     for i in range(len(letrasPalavraEscolhida)):
-                        if letrasPalavraEscolhida[i] != " ":
+                        if letrasPalavraEscolhida[i] != " " and letrasPalavraEscolhida[i] != "-":
                             if letrasPalavraEscolhida[i].lower() not in letrasCertas.lower():
                                 AcertouTodas = False
                     
