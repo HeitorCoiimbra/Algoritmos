@@ -2,7 +2,8 @@ from random import *
 
 continuarJogando = True
 continuarRodada = True
-erros = 0
+
+validos = "ABCDEFGHIJKLMNOPQRSTUVWXYZ3"
 
 palavras = ["Zky", "Rszyzydkwy", "Kfsky", "Zkcckby", "Qkdy", "Mkmrybby", "Mkck", "Zybdk", "Myjsxrk", "Mknosbk", "Kbwkbsy", 
             "Vsfby", "Lsmsmvodk", "Mkbby", "Msnkno", "Wobmkny", "Cyv", "Vek", "Ocdbovk", "Xefow", "Mrefk", "Pyqy", "Kqek", 
@@ -10,9 +11,8 @@ palavras = ["Zky", "Rszyzydkwy", "Kfsky", "Zkcckby", "Qkdy", "Mkmrybby", "Mkck",
             "Boxsdoxdo", "Mkbdk",  "Kmkmsk", "Oxobqsk", "Dowzy", "Zkbknyhy", "Wybdo", "Coxdswoxdy", "Sxdoxcsnkno", "Ckxqeo", 
             "Kvpklody", "Oqyscwy", "Xysdo", "Vklsbsxdy", "Oxsqwk", "Wony", "Nockccywlbkny", "Wowybsk", "Myvyccy", "Xysdo Coboxk", 
             "Ymevdy", "Csxy", "Dbkxcwsccky", "Bocoxrk", "Oczsbkv",  "Csxqevkb", "Oczobkxmk", "Rszxyco", "Ylbk-Zbswk", "Fkjsy", 
-            "Csvoxmsy", "Pkxdkcwk", "Hknboj", "Wscdobsy", "Bokvsnkno", "Pbkqwoxdy", "Nkny"]
+            "Csvoxmsy", "Pkxdkcwk", "Hknboj", "Wscdobsy", "Bokvsnkno", "Pbkqwoxdy", "Nkny", "Aeolbk-Mklomk", "Vek no ckxqeo", "Qekbnk-Mrefk"]
 
-validos = "ABCDEFGHIJKLMNOPQRSTUVWXYZ3"
 alfabeto = "KLMNOPQRSTUVWXYZABCDEFGHIJ"
 
 while continuarJogando == True:
@@ -20,16 +20,15 @@ while continuarJogando == True:
     palavraDecodificada = ""
 
     palavraEscolhida = ""
-    palavraEscolhidaLowercase = ""
     palavraEscondida = []
     letrasPalavraEscolhida = ""
-
 
     letrasErradas = ""
     letrasCertas = ""
     letra = ""
 
-
+    erros = 0
+    
     formaEscolha = int(input("\nComo deve ser escolhida a palavra? \n1. Sorteio \n2. Escolha Manualmente\n"))
     if formaEscolha > 2 or formaEscolha < 1:
         print("Escolha inválida")
@@ -56,7 +55,6 @@ while continuarJogando == True:
 
         else:
             palavraEscolhida = input("Qual palavra deve ser escolhida para a rodada? ")
-            palavraEscolhidaLowercase = palavraEscolhida.lower()
         
         for i in range(len(palavraEscolhida)):
             if palavraEscolhida[i] != " ":
@@ -147,7 +145,6 @@ while continuarJogando == True:
             if continuar == 1:
                 continuarJogando = True
                 continuarRodada = True
-                erros = 0
 
             else:
                 continuarJogando = False
