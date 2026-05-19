@@ -1,3 +1,10 @@
+#Faça uma função que recebe a média final de um aluno por parâmetro e retorna o seu conceito, conforme a tabela abaixo:
+# Nota         Conceito 
+# De 0 a 49   =  D 
+# De 50 a 69  =  C 
+# De 70 a 89  =  B 
+# De 90 a 100 =  A 
+
 def conceitoMedia(media):
     if media < 50:
         return "D"
