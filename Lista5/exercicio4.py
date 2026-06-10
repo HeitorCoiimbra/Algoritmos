@@ -1,19 +1,18 @@
+def achaMenor(vetor):
+    menor = vetor[0]
+    for i in range(len(vetor)):
+        if vetor[i] < menor:
+            menor = vetor[i]
+    return menor
 
-def ordenaVetor(valores):
-    posicao = 0
-    valoresOrdenados = []
-    for i in range(len(valores)):
-        atual = valores[i]
+def ordenaVetor(vetor):
+    vetorOrdenado = []
+    for i in range(len(vetor)):
+        menor = achaMenor(vetor)
+        vetorOrdenado.append(menor)
+        vetor.remove(menor)
+    return vetorOrdenado
 
-        for j in range(posicao, len(valores)):
-            lugarCerto = True
-            if atual > valores[j]:
-                lugarCerto = False
-        
-        if lugarCerto:
-            valoresOrdenados.append(atual)
-    return valoresOrdenados
+vetor = [1, 7, 4, 2, 8, 10, 3, 6, 5, 9, 11]
 
-valores = [3,2,1]
-
-print(ordenaVetor(valores))
+print(ordenaVetor(vetor))
