@@ -1,3 +1,12 @@
+def ordenaVetorBolha(vetor):
+    for i in range(len(vetor)):
+        for j in range(i, len(vetor)):
+            if vetor[j] < vetor[i]:
+                aux = vetor[i]
+                vetor[i] = vetor[j]
+                vetor[j] = aux
+    return vetor
+
 def achaMenor(vetor):
     menor = vetor[0]
     for i in range(len(vetor)):
@@ -5,7 +14,7 @@ def achaMenor(vetor):
             menor = vetor[i]
     return menor
 
-def ordenaVetor(vetor):
+def ordenaVetorMenor(vetor):
     vetorOrdenado = []
     for i in range(len(vetor)):
         menor = achaMenor(vetor)
@@ -15,4 +24,5 @@ def ordenaVetor(vetor):
 
 vetor = [1, 7, 4, 2, 8, 10, 3, 6, 5, 9, 11]
 
-print(ordenaVetor(vetor))
+# print(ordenaVetorMenor(vetor))
+print(ordenaVetorBolha(vetor))
