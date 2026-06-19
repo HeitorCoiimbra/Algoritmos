@@ -1,3 +1,4 @@
+from random import *
 #Funções Gerais
 def mostrarTabuleiro(tabuleiro):
     for i in range(len(tabuleiro)):
@@ -70,8 +71,49 @@ def registrarJogada(linha, coluna, tabuleiro, quem):
     else:
         return "Esse espaço já foi ocupado"
 
-#Máquina
-def rodadaMaquina():
+#Código
+def rodadaMaquina(tabuleiro):
+    joguei = False
+    #Ganhar
+    #Verificar todas as casa se pode ganhar
+    if not joguei:
+        for i in range(len(tabuleiro)):
+            for j in range(len(tabuleiro[i])):
+
+                if (registrarJogada(i, j, tabuleiro, "Código") == ""):
+                    tabuleiro[i][j] = "O"
+
+                    if (verificarVitoria("O", tabuleiro, "Código") == "Código"):
+                        registrarJogada(i, j, tabuleiro, "Código")
+                        joguei = True
+                        return
+                    else:
+                        tabuleiro[i][j] = " "
+        
+        #Não perder
+        if not joguei:
+            for i in range(len(tabuleiro)):
+                for j in range(len(tabuleiro[i])):
+
+                    if (registrarJogada(i, j, tabuleiro, "Jogador") == ""):
+                        tabuleiro[i][j] = "X"
+
+                        if (verificarVitoria("X", tabuleiro, "Jogador") == "Jogador"):
+                            tabuleiro[i][j] = " "
+                            registrarJogada(i, j, tabuleiro, "Código")
+                            joguei = True
+                            return
+                        else:
+                            tabuleiro[i][j] = " "
+        #"Aleatório"
+        
+        while not joguei:
+            i = randint(0,2)
+            j = randint(0,2)
+            if (registrarJogada(i, j, tabuleiro, "Código") == ""):
+                registrarJogada(i, j, tabuleiro, "Código")
+                joguei = True
+        
     return
 
 vencedor = ""
@@ -97,12 +139,14 @@ while continuarRodada:
         print("Coluna inválida")
         coluna = int(input("Em qual coluna deseja joga?\n"))
         
-    resultadoJogada = registrarJogada(linha, coluna, tabuleiro)
-    if not (resultadoJogada == ""): print(resultadoJogada)
+    resultadoJogada = registrarJogada(linha, coluna, tabuleiro, "Jogador")
+    if not (resultadoJogada == ""): 
+        print(resultadoJogada)
     
     vencedor = verificarVitoria("X", tabuleiro, "Jogador")
     
-    rodadaMaquina()
+    rodadaMaquina(tabuleiro)
+    vencedor = verificarVitoria("O", tabuleiro, "Código")
     mostrarTabuleiro(tabuleiro)
     if not (vencedor == ""): continuarRodada = False
 print(f"A partida acabou e o vencedor foi {vencedor}!")
