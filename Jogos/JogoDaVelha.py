@@ -179,9 +179,7 @@ def jogarLivremente(tabuleiro, codigoPrimeiro):
     return -1, -1
 
 def rodadaMaquina(tabuleiro, codigoPrimeiro):
-    joguei = False
     #Ganhar
-
     possoGanhar, i, j = verificarSePodeGanhar(tabuleiro, "O", "Código")
     if possoGanhar:
         registrarJogada(i, j, tabuleiro, "Código")
